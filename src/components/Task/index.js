@@ -18,13 +18,11 @@ const Todos = () => {
   const [token, setToken] = useState("");
 
   const state = useSelector((state) => {
-    return state;
+    return {
+      users: state.users,
+      TodosFun: state.TodosFun,
+    };
   });
-  //   (
-  //     token: state.Login.token,
-  //     todos: state.Todos.todos,
-  //   )
-  // });
 
   useEffect(() => {
     getAllTasks(state.users.token);

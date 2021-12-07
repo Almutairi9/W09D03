@@ -14,8 +14,9 @@ const Login = () => {
 
   const state = useSelector((state) => {
     console.log(state);
-    return state;
-    // token: state.Login.token,
+    return {
+      users: state.users,
+    }
   });
 
   const log = async (e) => {

@@ -12,11 +12,14 @@ const Signin = () => {
   const [password, setPassword] = useState("");
   // const [role, setRole] = useState("61af656c1d6e66117cb9b904");
 
-  const state = useSelector((state) => {
-    console.log(state);
-    return state; 
-  });
- 
+  // const state = useSelector((state) => {
+  //   console.log(state);
+  //   return {
+  //     users: state.users,
+  //     TodosFun: state.TodosFun,
+  //   };
+  // });
+
   const Sgin = async (e) => {
     try {
       e.preventDefault();
@@ -33,42 +36,41 @@ const Signin = () => {
   };
   return (
     <div>
-      {!state.token ? (
-        <form>
-          <h1>Signup</h1>
-          <p>Please fill in this form to create an account.</p>
-          <hr />
-          <label for="e-mail">
-            <b>Enter you e-mail :</b>
-          </label>
-          <input
-            type="text"
-            value={email}
-            placeholder="Enter you e-mail"
-            name="e-mail"
-            id="e-mail"
-            required
-            onChange={(e) => {
-              // console.log(e);
-              setEmail(e.target.value);
-            }}
-          />
-          <label for="password">
-            <b>Enter you password :</b>
-          </label>
-          <input
-            type="password"
-            value={password}
-            placeholder="Enter password "
-            name="password"
-            id="password"
-            required
-            onChange={(e) => {
-              // console.log(e.target.value);
-              setPassword(e.target.value);
-            }}
-          />
-          {/* <label for="e-mail">
+      <form>
+        <h1>Signup</h1>
+        <p>Please fill in this form to create an account.</p>
+        <hr />
+        <label for="e-mail">
+          <b>Enter you e-mail :</b>
+        </label>
+        <input
+          type="text"
+          value={email}
+          placeholder="Enter you e-mail"
+          name="e-mail"
+          id="e-mail"
+          required
+          onChange={(e) => {
+            // console.log(e);
+            setEmail(e.target.value);
+          }}
+        />
+        <label for="password">
+          <b>Enter you password :</b>
+        </label>
+        <input
+          type="password"
+          value={password}
+          placeholder="Enter password "
+          name="password"
+          id="password"
+          required
+          onChange={(e) => {
+            // console.log(e.target.value);
+            setPassword(e.target.value);
+          }}
+        />
+        {/* <label for="e-mail">
           <b>Enter you role :</b>
         </label>
         <input
@@ -80,14 +82,11 @@ const Signin = () => {
           required
           onChange={(e) => setRole(e.target.value)}
         /> */}
-          <hr />
-          <button onClick={Sgin} type="submit" className="registerbtn">
-            Signup
-          </button>
-        </form>
-      ) : (
-        <h2>rawan </h2>
-      )}
+        <hr />
+        <button onClick={Sgin} type="submit" className="registerbtn">
+          Signup
+        </button>
+      </form>
     </div>
   );
 };

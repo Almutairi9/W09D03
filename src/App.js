@@ -4,6 +4,7 @@ import Login from "./components/login";
 import Signin from "./components/signin";
 import Nav from "./components/Nav";
 import Task from "./components/Task";
+import Home from "./components/Home";
 
 function App() {
   
@@ -15,7 +16,8 @@ function App() {
         </Routes>
         
         <Routes>
-        <Route exact path="/" element={<Signin />} />
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/signup" element={<Signin />} />
           <Route exact path="/login" element={<Login />} />
           </Routes>
     </>

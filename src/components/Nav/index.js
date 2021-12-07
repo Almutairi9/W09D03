@@ -9,7 +9,10 @@ const Nav = () => {
   const dispatch = useDispatch();
 
   const state = useSelector((state) => {
-    return state;  
+    return {
+      users: state.users,
+      TodosFun: state.TodosFun,
+    };  
   });
 
   const logOut = () => {
