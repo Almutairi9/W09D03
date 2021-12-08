@@ -14,8 +14,8 @@ const Landpage = () => {
           alt="landpic"
         />
         <div className="top-right">
-          Technology Apps Get all the latest news and details of Technology News
-          from India and across the world on mint. Let's Connect Now!
+          {/* Technology Apps Get all the latest news and details of Technology News
+          from India and across the world on mint. Let's Connect Now! */}
           <br />
           <br />
           <Link

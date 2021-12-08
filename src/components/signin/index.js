@@ -10,7 +10,7 @@ const Signin = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [role, setRole] = useState("61af656c1d6e66117cb9b904");
+  const [role, setRole] = useState("");
 
   // const state = useSelector((state) => {
   //   console.log(state);
@@ -70,18 +70,33 @@ const Signin = () => {
             setPassword(e.target.value);
           }}
         />
-        {/* <label for="e-mail">
-          <b>Enter you role :</b>
-        </label>
+        <div>
+         <p>Please select your Role:</p>
+         {" "}
         <input
-          type="text"
-          value={role}
-          placeholder="Enter you role"
+          type="radio"
+          id="Admin"
           name="role"
-          id="role"
-          required
-          onChange={(e) => setRole(e.target.value)}
-        /> */}
+          value="61af656c1d6e66117cb9b904"
+          onChange={(e) => {
+            e.preventDefault();
+            setRole("61af656c1d6e66117cb9b904");
+          }}
+        />
+          <label for="Admin">Admin</label>
+          {" "}
+        <input
+          type="radio"
+          id="user"
+          name="role"
+          value="61af65831d6e66117cb9b906"
+          onChange={(e) => {
+            e.preventDefault();
+            setRole("61af65831d6e66117cb9b906");
+          }}
+        />
+          <label for="user">User</label>
+          </div> 
         <hr />
         <button onClick={Sgin} type="submit" className="registerbtn">
           Signup
