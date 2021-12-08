@@ -20,10 +20,10 @@ const Todos = () => {
   const state = useSelector((state) => {
     return {
       users: state.users,
-      TodosFun: state.TodosFun,
+      todos: state.todos.todos,
     };
   });
-
+console.log(state);
   useEffect(() => {
     getAllTasks(state.users.token);
     // User();
@@ -38,6 +38,8 @@ const Todos = () => {
 
   //get all tasks
   const getAllTasks = async (token) => {
+    // console.log("state.users.token");
+    // console.log(state.users.token);
     try {
       console.log(token);
       const result = await axios.get(`${BASE_URL}/todos`, {
@@ -45,7 +47,7 @@ const Todos = () => {
           Authorization: `Bearer ${state.users.token}`,
         },
       });
-      console.log(result);
+      console.log(result.data);
       dispatch(getTodosFunction(result.data));
       // setTasks(result.data);
     } catch (error) {
@@ -57,7 +59,8 @@ const Todos = () => {
   // add new task
   const addNewTask = async () => {
     try {
-      console.log(task);
+      console.log("state.users.token");
+      console.log(state.users);
       const result = await axios.post(
         `${BASE_URL}/todos`,
         {
@@ -131,8 +134,8 @@ const Todos = () => {
         </button>
       </div>
       <div>
-        {state.TodosFun.todos.length &&
-          state.TodosFun.todos.map((item) => (
+        {state.todos.length &&
+          state.todos.map((item) => (
             <div key={item._id}>
               <h2>{item.task}</h2>
               <button onClick={() => updateTask(item._id)}>Update</button>
