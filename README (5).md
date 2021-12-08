@@ -131,6 +131,11 @@ module.exports = mongoose.model("todo", todo);
 | Delete    |/todo        | { id }                                    |201       |    
 
 
+## UML diagrm:
+  
+  ![raw drawio](https://user-images.githubusercontent.com/92248041/145257951-efec8d68-4563-420a-b3c6-c31c4fc5ce79.png)
+
+  
 ## Acknowledgements
 
 I would like to express my special thanks of gratitude to our teachers as well as our tuwaiq javaScript bootcamp who gave us the golden opportunity to do this wonderful project on the topic (Todo ), which also helped us in doing a lot of Research and we came to know about so many new things. I am really thankful to them.
