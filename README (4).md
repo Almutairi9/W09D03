@@ -120,24 +120,16 @@ module.exports = mongoose.model("todo", todo);
 #### Backend routes 
 
 
-| HTTP Method | URL      | Request Body             | Success status    | Error Status | Description |
-| :-------- | :----------| :-------------           | :-----------| | :-----------| | :-----------| 
-|  POST     | /createrole | { role, Permissions }    | 201    | 404 | Checks if fields not empty (422) and role not exists (409), then create role and store role in session. | 
-|  GET      |  / role     |                          | 200    | 404 | Check if role is created in and return system.
-|  POST     |/todo        | {task}  req.body;        | 201    | 404 | Checks if fields not empty (422) and todo not exists (409), then create todo and store todo in session. |
-|  GET      |/todo        |                          | 200    | 404 | Check if todo is created in and return system.
-|  PUT      |/todo | { id } = req.params; { task } = req.body; |201 | 404 | Checks if fields not empty (422) and todo not exists (409), then update todo and store updated todo in session.| 
-| Delete    |/todo | { id }                   |201     | 404 | Delete todo with specific id |
+|HTTP Method| URL         | Request Body             | Success status    | Error Status            | Description |
+| :-------- | :---------- | :-------------           | :-----------| | :-----------| | :-----------| 
+|  POST     | /createrole | { role, Permissions }    | 201           | 404 | Checks if fields not empty (422) and role not exists (409), then create role and store role in session. | 
+|  GET      |  / role     |                          | 200           | 404 | Check if role is created in and return system.
+|  POST     |/todo        | {task}  req.body;        | 201           | 404 | Checks if fields not empty (422) and todo not exists (409), then create todo and store todo in session. |
+|  GET      |/todo        |                          | 200           | 404 | Check if todo is created in and return system.
+|  PUT      |/todo        | { id } = req.params; { task } = req.body; |201 | 404 | Checks if fields not empty (422) and todo not exists (409), then update todo and store updated todo in session.| 
+| Delete    |/todo        | { id }                   |201             | 404 | Delete todo with specific id |
 
 
 ## Acknowledgements
 
 I would like to express my special thanks of gratitude to our teachers as well as our tuwaiq javaScript bootcamp who gave us the golden opportunity to do this wonderful project on the topic (Todo ), which also helped us in doing a lot of Research and we came to know about so many new things. I am really thankful to them.
-
-
-## Acknowledgements
-
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
-
